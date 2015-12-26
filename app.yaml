@@ -1,0 +1,15 @@
+application: my-web-site
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+
+- url: (.*)/
+  static_files: static\1/index.html
+  upload: static/index.html
+  secure: always
+
+- url: /
+  static_dir: static
+  secure: always
