@@ -12,6 +12,6 @@ if [ $TRAVIS_BRANCH = "master" ]; then
 
   which gcloud
 
-  gcloud auth activate-service-account --key-file service-account.json
+  gcloud auth activate-service-account --key-file service_account.json
   gcloud -q preview app deploy --version=1 --project=my-website-1168 app.yaml
 fi
